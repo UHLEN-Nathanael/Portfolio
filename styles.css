@@ -49,11 +49,6 @@ h1 {
     font-size: 60px;
 }
 
-h2 {
-    font-size: 30px;
-    margin-left: 20px;
-}
-
 .p1 {
     font-size: 17px;
 }
@@ -86,72 +81,92 @@ main div p a img{
   width: 75%;
 }
 
-
-/* Ce qui concerne la partie contact */
-
-main form{
-	margin: 0px;
-	padding: 0px;
-	position: absolute;
-	margin: 0 15%;
+.box_project_1{
+  border-radius: 50% 20% / 10% 40%;
 }
 
-main form .corps-formulaire{
-	display:flex;
-	flex-wrap: wrap;
-	margin-bottom: 30px;
-}
-main form .corps-formulaire .groupe{
-	position: relative;
-	margin-top: 20px;
-	display: flex;
-	flex-direction: column;
-}
-main form .corps-formulaire .gauche .groupe input{
-	margin-top: 5px;
-	padding: 10px 5px 10px 30px;
-	border: 1px solid rgb(48,48,48);
-	outline-color: rgb(48,48,48);
-	border-radius: 5px;
-	background-color: #f8f8f8
-}
-main form .corps-formulaire .gauche .groupe i img{
-	width: 25px;
-	height: 25px;
-	position: absolute;
-	left: 7px;
-	bottom: 7px;
+body main div {
+	margin-bottom: 25px;
+	overflow: hidden; /* Cette propriété empêche le contenu de dépasser la taille de la div */
 }
 
-main form .corps-formulaire .droite{
-	margin-left: 40px;
+.project_droite {
+	float: right;
+	border-radius: 50% 20% / 10% 40%;
+	width: 60%;
+	background-color: rgb(48, 48, 48);
+	overflow: hidden; /* Cette propriété empêche le contenu de dépasser la taille de la div */
+	border: solid;
 }
 
-main form .corps-formulaire .droite .groupe{
-	height: 100%;
+.project_gauche {
+	float: left;
+	border-radius: 10% 40% / 50% 20% ;
+	width: 60%;
+	background-color: rgb(48, 48, 48);
+	overflow: hidden; /* Cette propriété empêche le contenu de dépasser la taille de la div */
+	border: solid;
 }
 
-main form .corps-formulaire .droite .groupe textarea{
-	margin-top: 5px;
-	padding: 15px;
-	background-color: #f8f8f8;
-	resize: none;
-	height: 72%;
-	border-radius: 5px;
+.texte_project {
+	color: white; 
+	text-align: center; 
+	padding-right: 50px;
+	display: flex; /* Utilisez flexbox pour centrer le contenu */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    text-align: center; /* Centre le texte à l'intérieur de la div */
 }
 
-main form .pied-formulaire button{
-	margin-top: 10px;
-	background-color: #f8f8f8;
-	font-size: 15px;
-	padding: 10px 20px;
-	border-radius: 5px;
-	outline: none;
-	cursor: pointer;
-	transition: transform 0.5s;
+a{
+    text-decoration: none;/*Pour que le lien ne soit plus "souligné"...*/
+	color: rgb(48, 48, 48);
 }
 
-main form .pied-formulaire button:hover{
-	transform: scale(1.1);
+main h2 {
+	font-size: 30px;
+    margin-left: 20px;
+	border-color: rgb(48, 48, 48);
+    border: solid;
+    border-radius: 5px;
+    border-spacing: 5px 20px;
+    padding: 10px;
+    position: sticky;
 }
-/* ------------------ */
+
+main a figure h2 {
+    font-size: 30px;
+    margin-left: 20px;
+	border: none;
+}
+
+.centered-text {
+    display: flex; /* Utilisez flexbox pour centrer le contenu */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    text-align: center; /* Centre le texte à l'intérieur de la div */
+    border-color: rgb(48, 48, 48);
+    border: solid;
+    border-radius: 5px;
+    border-spacing: 5px 20px;
+    padding: 10px;
+    height: 250px; /* Définir une hauteur pour la div */
+}
+
+.centered-text-lego {
+    display: flex; /* Utilisez flexbox pour centrer le contenu */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    text-align: center; /* Centre le texte à l'intérieur de la div */
+    border-color: rgb(48, 48, 48);
+    border: solid;
+    border-radius: 5px;
+    border-spacing: 5px 20px;
+    padding: 10px;
+    height: 200px; /* Définir une hauteur pour la div */
+}
+
+
+main a figure div h2 {
+    color: white;
+}
