@@ -1,172 +1,200 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
     text-align: center;
     color: white;
-    background-color: rgb(48, 48, 48);
-    padding: 5px 0;
+    background-color: #333;
+    padding-top: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-main {
-    flex: 1; /* Pour que le contenu principal occupe l'espace restant */
-    padding: 0 5px;
-    margin: 15px;
-}
-
-footer {
-    font-size: 13px;
-    background-color: rgb(48, 48, 48);
+nav {
+    width: 100%;
+    background-color: #333;
     color: white;
-}
-footer p{
-	text-align: right;
-    font-family: Arial;
-    padding: 0 30px;
-}
-footer figure div a img{ /* ajuster la taille des logos et la distance entre eux */
-	width: 40px;
-	height: 40px;
-	background-image: rgb(48, 48, 48);
-    padding: 30px 30px;
     text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-footer figure div { /* Centrer les logos des réseaux */
-	height: 50px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-h1 {
-    font-size: 60px;
-}
-
-.p1 {
-    font-size: 17px;
+nav.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 1000; /* Assure que le nav reste au-dessus du contenu */
 }
 
 nav a {
-    margin: 0 20px;
+    margin: 0 15px;
     color: white;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #ddd;
 }
 
-.principal{
-	font-size: 25px;
-	font-weight: bold;
+main {
+    flex: 1;
+    padding: 20px;
+    margin: 15px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 70px; /* Ajoute une marge supérieure pour éviter que le contenu soit masqué par le nav */
 }
 
-main div p a img{
-	padding-right: 15px;
+footer {
+    font-size: 14px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer figure div a img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+footer figure div a img:hover {
+    transform: scale(1.2);
+}
+
+h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.p1 {
+    font-size: 18px;
+    margin: 5px 0 5px 0;
+}
+
+.principal {
+    font-size: 20px;
 }
 
 .box {
-  width: 75%;
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
 }
 
-.box_centrer {
-  margin-left: 25%;
-  width: 75%;
-}
-
-.box_project_1{
-  border-radius: 50% 20% / 10% 40%;
-}
-
-body main div {
-	margin-bottom: 25px;
-	overflow: hidden; /* Cette propriété empêche le contenu de dépasser la taille de la div */
-}
-
-.project_droite {
-	float: right;
-	border-radius: 50% 20% / 10% 40%;
-	width: 60%;
-	background-color: rgb(48, 48, 48);
-	overflow: hidden; /* Cette propriété empêche le contenu de dépasser la taille de la div */
-	border: solid;
-}
-
+.project_droite,
 .project_gauche {
-	float: left;
-	border-radius: 10% 40% / 50% 20% ;
-	width: 60%;
-	background-color: rgb(48, 48, 48);
-	overflow: hidden; /* Cette propriété empêche le contenu de dépasser la taille de la div */
-	border: solid;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    transition: transform 0.3s;
+}
+
+.project_droite:hover,
+.project_gauche:hover {
+    transform: scale(1.05);
+}
+
+.project_droite img,
+.project_gauche img {
+    width: 100%;
+    height: auto;
 }
 
 .texte_project {
-	color: white; 
-	text-align: center; 
-	padding-right: 50px;
-	display: flex; /* Utilisez flexbox pour centrer le contenu */
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
-    text-align: center; /* Centre le texte à l'intérieur de la div */
-}
-
-a{
-    text-decoration: none;/*Pour que le lien ne soit plus "souligné"...*/
-	color: rgb(48, 48, 48);
-}
-
-main h2 {
-	font-size: 30px;
-    margin-left: 20px;
-	border-color: rgb(48, 48, 48);
-    border: solid;
-    border-radius: 5px;
-    border-spacing: 5px 20px;
-    padding: 10px;
-    position: sticky;
-}
-
-main a figure h2 {
-    font-size: 30px;
-    margin-left: 20px;
-	border: none;
-}
-
-.centered-text {
-    display: flex; /* Utilisez flexbox pour centrer le contenu */
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
-    text-align: center; /* Centre le texte à l'intérieur de la div */
-    border-color: rgb(48, 48, 48);
-    border: solid;
-    border-radius: 5px;
-    border-spacing: 5px 20px;
-    padding: 10px;
-    height: 250px; /* Définir une hauteur pour la div */
-}
-
-.centered-text-lego {
-    display: flex; /* Utilisez flexbox pour centrer le contenu */
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
-    text-align: center; /* Centre le texte à l'intérieur de la div */
-    border-color: rgb(48, 48, 48);
-    border: solid;
-    border-radius: 5px;
-    border-spacing: 5px 20px;
-    padding: 10px;
-    height: 200px; /* Définir une hauteur pour la div */
-}
-
-
-main a figure div h2 {
     color: white;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #555;
+}
+
+.centered-text,
+.centered-text-lego {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: solid 2px #333;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-item {
+    flex: 1 1 calc(33% - 20px);
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    position: relative;
+    height: 300px; /* Définit une hauteur fixe pour les cellules */
+    overflow: hidden;
+}
+
+.project-item img {
+    max-width: 80%; /* Réduit la taille des images */
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-height: 200px; /* Limite la hauteur des images */
+}
+
+.project-item h3 {
+    margin: 10px 0 0;
+    position: absolute; /* Position absolue pour le titre */
+    bottom: 10px; /* Place le titre en bas */
+    width: 100%; /* Prend toute la largeur de la cellule */
+    text-align: center; /* Centre le texte */
+    background-color: rgba(255, 255, 255, 0.8); /* Fond semi-transparent pour le texte */
+    padding: 5px 0; /* Espace autour du texte */
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+}
+
+.project-section {
+    padding-top: 80px; /* Ajustez cette valeur selon la hauteur de votre barre de navigation */
+    margin-top: -80px; /* Même valeur négative pour compenser le padding */
 }
