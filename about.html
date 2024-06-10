@@ -9,17 +9,16 @@
 
 <body>
 	<header>
-		<h1> UHLEN Nathanael </h1>
-		<p class="p1"> Etudiant en 3ème année de Licence SPI - EEA </p>
-		<br>
-		<nav>
-			<a href="index.html"> Accueil</a>
-			<a href="about.html" class="principal" > À propos</a>
-			<a href="projects.html"> Projets</a>
-		</nav>
-		<br>
+	    <h1>UHLEN Nathanael</h1>
+	    <p class="p1">Étudiant en 3ème année de Licence SPI - EEA</p>
 	</header>
 
+	<nav>
+	    <a href="index.html" class="principal">Accueil</a>
+	    <a href="about.html">À propos</a>
+	    <a href="projects.html">Projets</a>
+	</nav>
+	<div style="height: 60px;"></div>
 	<main class="box">
 		<h2> Qui suis-je ?</h2>
 
@@ -92,9 +91,10 @@
 				<p> En combinant mes compétences techniques avec ma capacité à gérer mon temps et mes tâches, ainsi qu'à coordonner les activités de groupe, je suis en mesure d'utiliser ces outils logiciels de manière efficace et efficiente. Je suis motivé à continuer à apprendre et à développer mes compétences dans ces domaines pour mieux me préparer à ma future carrière dans le domaine de l'électronique et de l'automatique.</p>
 			</ul>
 		</div>
-
 	</main>
 
+	<div style="height: 60px;"></div>
+	
 	<footer>
 		<figure>
 			<div>
@@ -108,5 +108,19 @@
 		</figure>
 			<p>Copyright  © 2024 par UHLEN Nathanael</p>
 	</footer>
+	<script>
+		window.onscroll = function() {stickyNav()};
+
+		var nav = document.querySelector("nav");
+		var sticky = nav.offsetTop;
+
+		function stickyNav() {
+		  if (window.pageYOffset > sticky) {
+		    nav.classList.add("sticky");
+		  } else {
+		    nav.classList.remove("sticky");
+		  }
+		}
+	</script>
 </body>
 </html>
