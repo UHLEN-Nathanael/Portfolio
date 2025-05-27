@@ -186,7 +186,7 @@ a:hover {
     bottom: 10px; /* Place le titre en bas */
     width: 100%; /* Prend toute la largeur de la cellule */
     text-align: center; /* Centre le texte */
-    background-color: rgba(255, 255, 255, 0.8); /* Fond semi-transparent pour le texte */
+    background-color: #f4f4f4; /* Fond semi-transparent pour le texte */
     padding: 5px 0; /* Espace autour du texte */
 }
 
